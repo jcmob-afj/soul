@@ -62,12 +62,12 @@ soul:
       paths:
         - /favicon.ico
 
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-#  instance:
-#    prefer-ip-address: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.16.10.205:6010/eureka/
+  instance:
+    prefer-ip-address: true
 
 
 logging:
