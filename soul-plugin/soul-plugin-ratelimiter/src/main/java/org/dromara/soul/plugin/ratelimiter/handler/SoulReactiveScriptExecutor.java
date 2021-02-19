@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -17,7 +15,6 @@
  * limitations under the License.
  */
 
->>>>>>> upstream/master
 package org.dromara.soul.plugin.ratelimiter.handler;
 
 import java.nio.ByteBuffer;
@@ -73,8 +70,4 @@ public class SoulReactiveScriptExecutor<K> extends DefaultReactiveScriptExecutor
         return Flux.usingWhen(Mono.fromSupplier(factory::getReactiveConnection), action::doInRedis,
                 ReactiveRedisConnection::closeLater);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
 }

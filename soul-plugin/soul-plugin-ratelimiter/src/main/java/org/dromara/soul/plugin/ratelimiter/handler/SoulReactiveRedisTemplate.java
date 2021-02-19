@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -17,7 +15,6 @@
  * limitations under the License.
  */
 
->>>>>>> upstream/master
 package org.dromara.soul.plugin.ratelimiter.handler;
 
 import java.util.List;
@@ -58,8 +55,4 @@ public class SoulReactiveRedisTemplate<K, V> extends ReactiveRedisTemplate<K, V>
                                final RedisElementReader<T> resultReader) {
         return reactiveScriptExecutor.execute(script, keys, args, argsWriter, resultReader);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
 }

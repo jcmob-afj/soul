@@ -176,7 +176,7 @@ public class UpstreamCheckService {
             updateSelectorHandler(selectorName, successList);
         } else {
             UPSTREAM_MAP.remove(selectorName);
-            updateSelectorHandler(selectorName, null);
+//            updateSelectorHandler(selectorName, null);
         }
     }
 

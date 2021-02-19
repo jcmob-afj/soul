@@ -65,7 +65,7 @@ soul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.16.10.205:6010/eureka/
+      defaultZone: http://172.16.20.7:6010/eureka/
   instance:
     prefer-ip-address: true
 

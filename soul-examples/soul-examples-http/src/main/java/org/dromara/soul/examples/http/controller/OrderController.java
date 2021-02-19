@@ -19,6 +19,7 @@ package org.dromara.soul.examples.http.controller;
 
 import org.dromara.soul.client.springmvc.annotation.SoulSpringMvcClient;
 import org.dromara.soul.examples.http.dto.OrderDTO;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,14 +28,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.log4j.Log4j2;
+
 /**
  * TestController.
  *
  * @author xiaoyu
  */
+@SuppressWarnings("checkstyle:SummaryJavadoc")
 @RestController
 @RequestMapping("/order")
 @SoulSpringMvcClient(path = "/order")
+@Log4j2
 public class OrderController {
 
     /**
@@ -94,5 +99,18 @@ public class OrderController {
         orderDTO.setId(id);
         orderDTO.setName("hello world restful inline " + id);
         return orderDTO;
+    }
+
+    /**
+     * Delete path variable.
+     *
+     * @param id the id
+     * @return desc
+     */
+    @DeleteMapping("/delete/{id}")
+    @SoulSpringMvcClient(path = "/delete/{id}")
+    public String delete(@PathVariable("id") final String id) {
+        log.info("delete order,id is " + id);
+        return "delete order,id is " + id;
     }
 }
