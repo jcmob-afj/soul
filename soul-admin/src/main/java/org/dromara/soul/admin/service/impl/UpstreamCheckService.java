@@ -173,10 +173,10 @@ public class UpstreamCheckService {
         }
         if (successList.size() > 0) {
             UPSTREAM_MAP.put(selectorName, successList);
-            updateSelectorHandler(selectorName, successList);
+//            updateSelectorHandler(selectorName, successList);
         } else {
             UPSTREAM_MAP.remove(selectorName);
-            updateSelectorHandler(selectorName, null);
+//            updateSelectorHandler(selectorName, null);
         }
     }
 

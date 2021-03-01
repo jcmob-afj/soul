@@ -38,7 +38,7 @@ public class FallbackUtils {
      * @return the mono
      */
     public static Mono<Void> getNoSelectorResult(final String pluginName, final ServerWebExchange exchange) {
-        log.error("can not match selector data: {}", pluginName);
+//        log.error("can not match selector data: {}", pluginName);
         Object error = SoulResultWrap.error(SoulResultEnum.CANNOT_FIND_SELECTOR.getCode(), SoulResultEnum.CANNOT_FIND_SELECTOR.getMsg(), null);
         return WebFluxResultUtils.result(exchange, error);
     }
